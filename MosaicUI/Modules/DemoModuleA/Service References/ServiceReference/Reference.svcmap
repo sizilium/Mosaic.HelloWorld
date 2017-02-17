@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="32e4b119-a42c-4781-b618-44e435553e88" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/DemoModule/DemoModuleAService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="56849b30-edcb-4149-abb3-01f8ec583f48" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DemoModule/DemoModuleAService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="a262c098-2250-440a-86f2-4dd54c1788ac" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DemoModule/DemoModuleAService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="0694a527-771c-44c5-b8cf-544cc9c08726" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DemoModule/DemoModuleAService/mex" />
+    <MetadataFile FileName="MosaicSample.DemoModuleA1.xsd" MetadataType="Schema" ID="b694c9cc-2ace-48e7-ba26-03d66b4bf4bb" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DemoModule/DemoModuleAService/mex" />
+    <MetadataFile FileName="VP.FF.PT.Common.PlatformEssentials.Entities.DTOs.xsd" MetadataType="Schema" ID="d0756285-9592-40cb-aaf2-3335c5662f8b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DemoModule/DemoModuleAService/mex" />
+    <MetadataFile FileName="VP.FF.PT.Common.PlatformEssentials.Entities.xsd" MetadataType="Schema" ID="499c3734-15a0-4521-89d2-e9ccc136ae26" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DemoModule/DemoModuleAService/mex" />
+    <MetadataFile FileName="VP.FF.PT.Common.PlatformEssentials.xsd" MetadataType="Schema" ID="c9395f2c-c7d5-48d3-96f4-2ca1fbc1a776" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DemoModule/DemoModuleAService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

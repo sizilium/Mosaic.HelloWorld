@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ElementAndLabelProviders>
+  <ElementAndLabelProviders.LabelTextProviders>
+    <Labels:DictionaryLabelTextProvider UseDefaults = "False">
+      <Labels:StringArrayObject Key="TrackingIdBarcode">
+        <s:String>Lorem ipsum dolor sit amet,</s:String>
+        <s:String>...zzz...</s:String>
+        <s:String>Integer</s:String>
+      </Labels:StringArrayObject>
+      <Labels:StringArrayObject Key="STEP1">
+        <s:String>Lorem ipsum dolor sit amet,</s:String>
+        <s:String>...zzz...</s:String>
+        <s:String>Integer</s:String>
+      </Labels:StringArrayObject>
+      <Labels:StringArrayObject Key="STEP2">
+        <s:String>Lorem ipsum dolor sit amet,</s:String>
+        <s:String>...zzz...</s:String>
+        <s:String>Integer</s:String>
+      </Labels:StringArrayObject>
+      <Labels:StringArrayObject Key="STEP3">
+        <s:String>Lorem ipsum dolor sit amet,</s:String>
+        <s:String>...zzz...</s:String>
+        <s:String>Integer</s:String>
+      </Labels:StringArrayObject>
+      <Labels:StringArrayObject Key="STEP4">
+        <s:String>Lorem ipsum dolor sit amet,</s:String>
+        <s:String>...zzz...</s:String>
+        <s:String>Integer</s:String>
+      </Labels:StringArrayObject>
+      <Labels:StringArrayObject Key="STEP5">
+        <s:String>Lorem ipsum dolor sit amet,</s:String>
+        <s:String>...zzz...</s:String>
+        <s:String>Integer</s:String>
+      </Labels:StringArrayObject>
+      <Labels:StringArrayObject Key="STEP6">
+        <s:String>Lorem ipsum dolor sit amet,</s:String>
+        <s:String>...zzz...</s:String>
+        <s:String>Integer</s:String>
+      </Labels:StringArrayObject>
+    </Labels:DictionaryLabelTextProvider>
+  </ElementAndLabelProviders.LabelTextProviders>
+  <ElementAndLabelProviders.Element>
+    <Group>
+      <VerticalStack Width = "60 mm" Alignment = "TopLeft">
+        <HorizontalStack Orientation="Normal" Height="20 mm" Width="40 mm" LeftMargin="10 mm" RightMargin="10 mm" TopMargin="10 mm">
+          <Barcode ContentProperty="TrackingIdBarcode" BarcodeType="Code128" BarcodeWidth="2" HumanReadable="False" HumanReadableFontSize="3.125 mm" />
+        </HorizontalStack>
+        <TextBlock ContentProperty = "STEP1" Height = "10 mm" Width = "50 mm" TopMargin = "2 mm" LeftMargin = "10 mm" FontSize = "5 mm" Align = "Left"/>
+        <TextBlock ContentProperty = "STEP2" Height = "10 mm" Width = "50 mm" TopMargin = "2 mm" LeftMargin = "10 mm" FontSize = "5 mm" Align = "Left"/>
+        <TextBlock ContentProperty = "STEP3" Height = "10 mm" Width = "50 mm" TopMargin = "2 mm" LeftMargin = "10 mm" FontSize = "5 mm" Align = "Left"/>
+        <TextBlock ContentProperty = "STEP4" Height = "10 mm" Width = "50 mm" TopMargin = "2 mm" LeftMargin = "10 mm" FontSize = "5 mm" Align = "Left"/>
+        <TextBlock ContentProperty = "STEP5" Height = "10 mm" Width = "50 mm" TopMargin = "2 mm" LeftMargin = "10 mm" FontSize = "5 mm" Align = "Left"/>
+        <TextBlock ContentProperty = "STEP6" Height = "10 mm" Width = "50 mm" TopMargin = "2 mm" LeftMargin = "10 mm" FontSize = "5 mm" Align = "Left"/>
+      </VerticalStack>
+    </Group>
+  </ElementAndLabelProviders.Element>
+</ElementAndLabelProviders>
+
+

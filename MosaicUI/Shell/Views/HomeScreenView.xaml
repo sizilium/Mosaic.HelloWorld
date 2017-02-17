@@ -1,0 +1,147 @@
+﻿<UserControl x:Class="MosaicSample.Shell.Views.HomeScreenView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:cal="http://www.caliburnproject.org"
+             xmlns:graph="clr-namespace:VP.FF.PT.Common.WpfInfrastructure.Screens.Model.Graph;assembly=VP.FF.PT.Common.WpfInfrastructure"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converters="clr-namespace:VP.FF.PT.Common.WpfInfrastructure.Converters;assembly=VP.FF.PT.Common.WpfInfrastructure"
+             xmlns:wpf="clr-namespace:SoftArcs.WPFSmartLibrary.UIClassAttachedProperties;assembly=VP.FF.PT.Common.WpfInfrastructure"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:infrastructureViewsViewModels="clr-namespace:VP.FF.PT.Common.WpfInfrastructure.Screens.ViewModels;assembly=VP.FF.PT.Common.WpfInfrastructure"
+             xmlns:views="clr-namespace:VP.FF.PT.Common.WpfInfrastructure.Screens.Views;assembly=VP.FF.PT.Common.WpfInfrastructure"
+             xmlns:viewModels1="clr-namespace:MosaicSample.Shell"
+             cal:Bind.AtDesignTime="True"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance Type=viewModels1:HomeScreenViewModel,
+                                              IsDesignTimeCreatable=True}"
+             d:DesignHeight="1200"
+             d:DesignWidth="1600">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/VP.FF.PT.Common.WpfInfrastructure;component/Screens/Views/HomeScreenResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Module Graph -->
+        <graph:ModuleGraphLayoutControl Grid.Row="0"
+                                        Grid.RowSpan="2"
+                                        Grid.Column="1"
+                                        Grid.ColumnSpan="2"
+                                        Graph="{Binding Path=ModuleGraph}"
+                                        IsAnimationEnabled="False"
+                                        IsEdgeForcingEnabled="{Binding CanForceEdges}"
+                                        IsVertexMovingEnabled="{Binding CanMoveVertices}"
+                                        LayoutAlgorithmType="Tree"
+                                        OverlapRemovalAlgorithmType="FSA"
+                                        RenderTransformOrigin="0.5,0.5"
+                                        Visibility="{Binding ElementName=PaperStreamToggleButton,
+                                                             Path=IsChecked,
+                                                             Converter={converters:BooleanToVisibilityConverter}}"
+                                        wpf:VisibilityAnimation.AnimationDuration="500.0"
+                                        wpf:VisibilityAnimation.AnimationType="Fade" Margin="141,4,-141,-4">
+            <graph:ModuleGraphLayoutControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </graph:ModuleGraphLayoutControl.RenderTransform>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="VertextClickEvent">
+                    <cal:ActionMessage MethodName="OnVertexSelected">
+                        <cal:Parameter Value="$source" />
+                        <cal:Parameter Value="$eventArgs" />
+                    </cal:ActionMessage>
+                </i:EventTrigger>
+                <i:EventTrigger EventName="EdgeClickEvent">
+                    <cal:ActionMessage MethodName="OnEdgeSelected">
+                        <cal:Parameter Value="$source" />
+                        <cal:Parameter Value="$eventArgs" />
+                    </cal:ActionMessage>
+                </i:EventTrigger>
+                <i:EventTrigger EventName="NewVertexPositionsEvent">
+                    <cal:ActionMessage MethodName="OnNewVertexPositions" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </graph:ModuleGraphLayoutControl>
+
+        <Border Grid.Row="0"
+                Grid.Column="0"
+                Margin="0,0,0,10"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Background="{StaticResource Brush.View.Background}"
+                CornerRadius="0,19,0,0">
+            <views:StatisticsView/>
+        </Border>
+
+        <views:AlarmSummaryView x:Name="summaryBox"
+                                  Grid.Row="1"
+                                  Grid.Column="0"
+                                  Grid.ColumnSpan="3"
+                                  Height="Auto"
+                                  HorizontalAlignment="Left"
+                                  VerticalAlignment="Stretch"
+                                  cal:Bind.AtDesignTime="True"
+                                  cal:Bind.Model="{Binding AlarmSummaryViewModel}"
+                                  d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True,
+                                                                   Type={x:Type infrastructureViewsViewModels:AlarmSummaryViewModel}}" />
+        <StackPanel Grid.Row="0"
+                    Grid.RowSpan="2"
+                    Grid.Column="2"
+                    Margin="0,0,70,70"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0"
+                        Style="{StaticResource Button.Start}" Margin="4,0,0,0">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <cal:ActionMessage MethodName="GlobalStart" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+                <Button Grid.Column="1" Style="{StaticResource Button.Stop}" Margin="4,0,0,0">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <cal:ActionMessage MethodName="GlobalStop" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+            </Grid>
+
+        </StackPanel>
+
+        <TextBlock Grid.Row="0"
+                   Grid.RowSpan="2"
+                   Grid.Column="2"
+                   Margin="0,0,70,30"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   FontSize="{StaticResource FontSize.Label.State}"
+                   Foreground="{StaticResource Brush.GraphControl.LabelForeground}"
+                   Text="{Binding PlatformState}" />
+    </Grid>
+</UserControl>

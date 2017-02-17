@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6d9df2a5-a910-4948-8b7e-16e021b9eedd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8761/CommonServices/LogService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="2fa87958-22b3-4440-90a4-8fdf247964e9" SourceId="1" SourceUrl="http://localhost:8761/CommonServices/LogService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="e2e45e7e-9778-49e9-8840-46b2c626ed01" SourceId="1" SourceUrl="http://localhost:8761/CommonServices/LogService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="73047da3-ea7d-40c3-b565-02f818a517da" SourceId="1" SourceUrl="http://localhost:8761/CommonServices/LogService/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="491befcc-f9a8-40e2-abed-5ba8802af34f" SourceId="1" SourceUrl="http://localhost:8761/CommonServices/LogService/mex" />
+    <MetadataFile FileName="VP.FF.PT.Common.PlatformEssentials.LogInformation.xsd" MetadataType="Schema" ID="a76dfd3a-0bec-46f4-9edc-18fac745bcb9" SourceId="1" SourceUrl="http://localhost:8761/CommonServices/LogService/mex" />
+    <MetadataFile FileName="System.xsd" MetadataType="Schema" ID="7e31c595-84f4-4c9d-8da4-1e2b1fe8351c" SourceId="1" SourceUrl="http://localhost:8761/CommonServices/LogService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

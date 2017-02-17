@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/VP.FF.PT.Common.PlatformEssentials.Entities.DTOs" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/VP.FF.PT.Common.PlatformEssentials.Entities.DTOs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/VP.FF.PT.Common.PlatformEssentials.Entities" />
+  <xs:complexType name="ArrayOfPlatformModuleDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlatformModuleDTO" nillable="true" type="tns:PlatformModuleDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlatformModuleDTO" nillable="true" type="tns:ArrayOfPlatformModuleDTO" />
+  <xs:complexType name="PlatformModuleDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdsPort" type="xs:int" />
+      <xs:element minOccurs="0" name="HasErrors" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HasWarnings" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="IsEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaxCapacity" type="xs:int" />
+      <xs:element minOccurs="0" name="MostImportantAlarmText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PathRootController" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlatformItems" nillable="true" type="tns:ArrayOfPlatformItemDTO" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/VP.FF.PT.Common.PlatformEssentials.Entities" minOccurs="0" name="State" type="q1:PlatformModuleState" />
+      <xs:element minOccurs="0" name="StreamType" type="xs:int" />
+      <xs:element minOccurs="0" name="SubState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlatformModuleDTO" nillable="true" type="tns:PlatformModuleDTO" />
+  <xs:complexType name="ArrayOfPlatformItemDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlatformItemDTO" nillable="true" type="tns:PlatformItemDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlatformItemDTO" nillable="true" type="tns:ArrayOfPlatformItemDTO" />
+  <xs:complexType name="PlatformItemDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssociatedPlatformModuleEntity" nillable="true" type="tns:PlatformModuleEntityDTO" />
+      <xs:element minOccurs="0" name="DetectedCount" type="xs:long" />
+      <xs:element minOccurs="0" name="DetectedInModuleCount" type="xs:long" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="ItemBehind" nillable="true" type="tns:PlatformItemDTO" />
+      <xs:element minOccurs="0" name="ItemId" type="xs:long" />
+      <xs:element minOccurs="0" name="ItemInFront" nillable="true" type="tns:PlatformItemDTO" />
+      <xs:element minOccurs="0" name="LastDetectionTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LogHistory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Route" nillable="true" type="tns:RouteDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlatformItemDTO" nillable="true" type="tns:PlatformItemDTO" />
+  <xs:complexType name="PlatformModuleEntityDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="LimitItemCount" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlatformItems" nillable="true" type="tns:ArrayOfPlatformItemDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlatformModuleEntityDTO" nillable="true" type="tns:PlatformModuleEntityDTO" />
+  <xs:complexType name="RouteDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrentIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="RouteItems" nillable="true" type="tns:ArrayOfRouteItemDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RouteDTO" nillable="true" type="tns:RouteDTO" />
+  <xs:complexType name="ArrayOfRouteItemDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RouteItemDTO" nillable="true" type="tns:RouteItemDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRouteItemDTO" nillable="true" type="tns:ArrayOfRouteItemDTO" />
+  <xs:complexType name="RouteItemDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ForbiddenModuleType" type="xs:int" />
+      <xs:element minOccurs="0" name="ForceModuleInstance" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Index" type="xs:int" />
+      <xs:element minOccurs="0" name="ModuleType" type="xs:int" />
+      <xs:element minOccurs="0" name="OverrideModuleType" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProcessData" nillable="true" type="tns:ArrayOfValueDTO" />
+      <xs:element minOccurs="0" name="ProcessSettings" nillable="true" type="tns:ArrayOfValueDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RouteItemDTO" nillable="true" type="tns:RouteItemDTO" />
+  <xs:complexType name="ArrayOfValueDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValueDTO" nillable="true" type="tns:ValueDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfValueDTO" nillable="true" type="tns:ArrayOfValueDTO" />
+  <xs:complexType name="ValueDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Parameter" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValueDTO" nillable="true" type="tns:ValueDTO" />
+</xs:schema>

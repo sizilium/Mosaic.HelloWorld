@@ -1,0 +1,31 @@
+﻿html {
+    font-size: 24px;
+}
+
+body {
+    padding-top: 70px;
+    font-size: 20px;
+}
+
+.container-fluid {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.navbar-brand {
+    font-size: 30px;
+}
+
+.alert {
+   padding: 10px;
+   margin-bottom: 5px;
+}
+
+.form-control {
+    font-size: 36px;
+    height: 55px;
+}
+
+.form-group {
+    margin-bottom: 40px;
+}

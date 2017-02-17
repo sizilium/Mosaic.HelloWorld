@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="MosaicSample.UI.FinishingStationModule.Views.FinishingStationModulePage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:cal="http://www.caliburnproject.org"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:wpfInfrastructure="clr-namespace:VP.FF.PT.Common.WpfInfrastructure;assembly=VP.FF.PT.Common.WpfInfrastructure"
+             xmlns:viewModels="clr-namespace:MosaicSample.UI.FinishingStationModule"
+             Width="1742"
+             d:DesignHeight="500"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+
+            <ResourceDictionary.MergedDictionaries>
+                <wpfInfrastructure:DesignTimeResourceDictionary Source="/VP.FF.PT.Common.WpfInfrastructure;component/Styles/SaberStyles.xaml" />
+                <ResourceDictionary Source="/VP.FF.PT.Common.WpfInfrastructure;component/Styles/Resources/BrushResources.xaml" />
+                <ResourceDictionary Source="/VP.FF.PT.Common.WpfInfrastructure;component/Styles/Resources/FontResources.xaml" />
+                <ResourceDictionary Source="/VP.FF.PT.Common.WpfInfrastructure;component/Styles/Resources/Controls/ButtonResources.xaml" />
+                <ResourceDictionary Source="/VP.FF.PT.Common.WpfInfrastructure;component/Styles/Resources/Controls/labelresources.xaml" />
+                <ResourceDictionary Source="/VP.FF.PT.Common.WpfInfrastructure;component/Styles/Resources/Controls/checkboxresources.xaml" />
+                <ResourceDictionary Source="/VP.FF.PT.Common.WpfInfrastructure;component/Styles/Resources/Controls/textboxresources.xaml" />
+                <ResourceDictionary Source="/VP.FF.PT.Common.WpfInfrastructure;component/Styles/Resources/Controls/radiobuttonresources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Margin="10,10,0,0" d:DataContext="{d:DesignInstance Type=viewModels:FinishingStationModuleViewModel, IsDesignTimeCreatable=True}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="84*"/>
+            <ColumnDefinition Width="349*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="{StaticResource FontSize.View.Title}" Foreground="{StaticResource Brush.View.Foreground.Title}" FontWeight="UltraLight"
+                       VerticalAlignment="Center" Text="Zebra Printer IP:" />
+        <TextBox Grid.Column="1" Text="{Binding ZebraPrinterIP}"/>
+        <TextBlock FontSize="{StaticResource FontSize.View.Title}" Grid.Row="1" Foreground="{StaticResource Brush.View.Foreground.Title}" FontWeight="UltraLight"
+                       VerticalAlignment="Center" Text="ZPL Template file:" />
+        <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding ZPLTemplateFileLocation}"/>
+    </Grid>
+</UserControl>

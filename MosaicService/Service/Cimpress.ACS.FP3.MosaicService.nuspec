@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>MosaicSample.MosaicService</id>
+    <version>1.0.0.0</version>
+    <authors>Automation and Control Systems</authors>
+    <description>MosaicService</description>
+    <projectUrl>https://mcpstash.cimpress.net/projects/ACS/repos/fp3/browse</projectUrl>
+    <tags>ACS, FP3</tags>
+  </metadata>
+  <files>
+    <file src="lib\*.*" target=""/>
+  </files>
+</package>

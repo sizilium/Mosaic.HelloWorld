@@ -1,0 +1,66 @@
+﻿{
+  "Workflows": [
+    {
+      "Barcode": "123456789",
+      "WorkFlow": [
+        "EntryStation",
+        "DemoModuleA",
+        "DemoModuleC",
+        "FinishingModule"
+      ]
+    },
+    {
+      "Barcode": "223456789",
+      "WorkFlow": [
+        "EntryStation",
+        "DemoModuleA",
+        "DemoModuleC",
+        "FinishingModule"
+      ]
+    },
+    {
+      "Barcode": "123456788",
+      "WorkFlow": [
+        "EntryStation",
+        "DemoModuleA",
+        "DemoModuleC",
+        "DemoModuleB",
+        "DemoModuleC",
+        "FinishingModule"
+      ]
+    },
+    {
+      "Barcode": "223456788",
+      "WorkFlow": [
+        "EntryStation",
+        "DemoModuleA",
+        "DemoModuleC",
+        "DemoModuleB",
+        "DemoModuleC",
+        "DemoModuleB",
+        "DemoModuleC",
+        "FinishingModule"
+      ]
+    },
+    {
+      "Barcode": "123456787",
+      "WorkFlow": [
+        "EntryStation",
+        "DemoModuleB",
+        "DemoModuleC",
+        "FinishingModule"
+      ]
+    },
+    {
+      "Barcode": "123456786",
+      "WorkFlow": [
+        "EntryStation",
+        "DemoModuleB",
+        "DemoModuleC",
+        "DemoModuleB",
+        "DemoModuleC",
+        "FinishingModule"
+      ]
+    }
+  ]
+}
