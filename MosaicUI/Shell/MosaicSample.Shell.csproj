@@ -199,6 +199,9 @@
       <HintPath>..\..\nugetpackages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Expression.Interactions">
+      <HintPath>..\..\ThirdPartyLibs\Wpf\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Surface.Presentation">
       <HintPath>..\..\ThirdPartyLibs\Wpf\Surface2\Microsoft.Surface.Presentation.dll</HintPath>
     </Reference>
@@ -292,9 +295,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="WindowsBase" />
-    <Reference Include="WPFExtensions, Version=1.0.3437.34043, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\nugetpackages\WPFExtensions.1.0.0\lib\WPFExtensions.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="WPFExtensions">
+      <HintPath>..\..\ThirdPartyLibs\GraphSharp\WPFExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="WPFToolkit.Extended">
+      <HintPath>..\..\ThirdPartyLibs\ExtendedWpfToolkit\WPFToolkit.Extended.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
